@@ -1,4 +1,4 @@
-[![Status](https://img.shields.io/badge/Status-Live%20em%20Produção-brightgreen)](https://technical-article-translator.vercel.app/translatia)
+[![Status](https://img.shields.io/badge/Status-Live%20in%20Production-brightgreen)](https://technical-article-translator.vercel.app/translatia)
 [![Python](https://img.shields.io/badge/Python-3.11+-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi&logoColor=white)](https://translatia.onrender.com/docs)
 [![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js&logoColor=white)](https://technical-article-translator.vercel.app/translatia)
@@ -11,91 +11,91 @@
   <h1>⟨/⟩ Translatia — Rs4Machine</h1>
   <img src="assets/translatia.gif" alt="Translatia Demo" width="100%" />
   <p><strong>Technical Translation Engine v2.0</strong></p>
-  <p>Tradutor especializado em conteúdo técnico — preserva terminologia de IA, engenharia e tecnologia.</p>
+  <p>Specialized translator for technical content — preserves AI, engineering and technology terminology.</p>
   <p>
-    <a href="https://technical-article-translator.vercel.app/translatia" target="_blank"><strong>🚀 App Online</strong></a> •
+    <a href="https://technical-article-translator.vercel.app/translatia" target="_blank"><strong>🚀 Live App</strong></a> •
     <a href="https://translatia.onrender.com/docs" target="_blank"><strong>📡 API Docs</strong></a> •
     <a href="https://github.com/raphaelmendes-dev"><strong>GitHub</strong></a> •
-    <a href="mailto:python.dev.raphael@gmail.com">Contato</a>
+    <a href="mailto:python.dev.raphael@gmail.com">Contact</a>
   </p>
-  <p><em>README in <a href="README.en.md">English</a></em></p>
+  <p><em>README em <a href="README.pt-br.md">Português</a></em></p>
 </div>
 
 ---
 
-## 🎯 Visão Geral
+## 🎯 Overview
 
-O **Translatia** é um tradutor de artigos técnicos desenvolvido pela **Rs4Machine**. Diferente de tradutores genéricos, ele preserva terminologia especializada de IA, machine learning e engenharia durante a tradução, suporta upload de PDFs completos e oferece um glossário técnico interativo.
+**Translatia** is a technical article translator built by **Rs4Machine**. Unlike generic translators, it preserves specialized AI, machine learning and engineering terminology during translation, supports full PDF uploads and provides an interactive technical glossary.
 
-- 📄 Upload de PDF com extração automática de texto
-- 🌐 Tradução entre 7 idiomas (EN, PT, ES, DE, FR, ZH, JA)
-- 🧠 Glossário técnico com detecção automática de termos
-- ⚡ Chunking automático para documentos grandes
-- 🖥️ Interface dark mode com design DNA Rs4Machine
-- 🔄 Efeito de scan animado durante o processamento
+- 📄 PDF upload with automatic text extraction
+- 🌐 Translation between 7 languages (EN, PT, ES, DE, FR, ZH, JA)
+- 🧠 Technical glossary with automatic term detection
+- ⚡ Automatic chunking for large documents
+- 🖥️ Dark mode interface with Rs4Machine design DNA
+- 🔄 Animated scan effect during processing
 
 ---
 
-## 🏗️ Arquitetura
+## 🏗️ Architecture
 
 ```
 translatia/
 ├── frontend/                        → Next.js 15 (Vercel)
 │   ├── app/
 │   │   └── translatia/
-│   │       └── page.jsx             → Orquestrador principal (~180 linhas)
+│   │       └── page.jsx             → Main orchestrator (~180 lines)
 │   ├── components/Translatia/
 │   │   ├── Header.jsx               → Logo + chips + progress bar
-│   │   ├── Toolbar.jsx              → Seletores + PDF upload + botão
-│   │   ├── TextPanel.jsx            → Painéis original e traduzido
-│   │   ├── GlossaryPanel.jsx        → Sidebar glossário técnico
-│   │   ├── ScanOverlay.jsx          → Efeito raio-x animado
-│   │   ├── LanguageSelector.jsx     → Dropdown de idiomas
-│   │   └── PdfUpload.jsx            → Upload PDF → backend
+│   │   ├── Toolbar.jsx              → Selectors + PDF upload + button
+│   │   ├── TextPanel.jsx            → Original and translated panels
+│   │   ├── GlossaryPanel.jsx        → Technical glossary sidebar
+│   │   ├── ScanOverlay.jsx          → Animated scan effect
+│   │   ├── LanguageSelector.jsx     → Language dropdown
+│   │   └── PdfUpload.jsx            → PDF upload → backend
 │   ├── hooks/
-│   │   └── useTypewriter.js         → Animação typewriter
+│   │   └── useTypewriter.js         → Typewriter animation
 │   ├── constants/
-│   │   └── tokens.js                → Design DNA Rs4Machine
+│   │   └── tokens.js                → Rs4Machine design DNA
 │   └── styles/
 │       └── translatia.css           → Keyframes + globals
 └── backend/                         → Python + FastAPI (Render)
     ├── main.py                      → POST /translate + POST /upload-pdf
     ├── requirements.txt
     └── services/
-        ├── translator.py            → Google Translator + glossário protegido
-        └── pdf_extractor.py         → pypdf — extração de texto
+        ├── translator.py            → Google Translator + protected glossary
+        └── pdf_extractor.py         → pypdf — text extraction
 ```
 
 ---
 
-## ✨ Funcionalidades
+## ✨ Features
 
-- Upload de PDF com extração e tradução automática
-- Tradução entre 7 idiomas com seletor customizado
-- Glossário técnico que detecta e preserva termos automaticamente
-- Chunking inteligente para documentos com mais de 4500 caracteres
-- Swap de idiomas com um clique
-- Efeito de scan animado (raio-x) durante o processamento
-- Contador de palavras e caracteres em tempo real
-- Interface 100% responsiva com design tokens Rs4Machine
+- PDF upload with automatic extraction and translation
+- Translation between 7 languages with custom selector
+- Technical glossary that automatically detects and preserves terms
+- Smart chunking for documents over 4500 characters
+- One-click language swap
+- Animated scan (x-ray) effect during processing
+- Real-time word and character counter
+- Fully responsive interface with Rs4Machine design tokens
 
 ---
 
-## 🛠️ Stack Técnica
+## 🛠️ Tech Stack
 
-| Camada | Tecnologia |
+| Layer | Technology |
 |---|---|
 | Frontend | Next.js 15 + React |
-| Estilo | CSS-in-JS + Design Tokens Rs4Machine |
+| Styling | CSS-in-JS + Rs4Machine Design Tokens |
 | Backend | Python 3.11+ + FastAPI + uvicorn |
-| Tradução | deep-translator (Google Translator) |
+| Translation | deep-translator (Google Translator) |
 | PDF | pypdf |
-| Deploy Frontend | Vercel |
-| Deploy Backend | Render |
+| Frontend Deploy | Vercel |
+| Backend Deploy | Render |
 
 ---
 
-## 🚀 Como Rodar Localmente
+## 🚀 Running Locally
 
 ### Backend
 ```powershell
@@ -106,12 +106,12 @@ pip install -r requirements.txt
 uvicorn main:app --reload --port 8000
 ```
 
-Crie o arquivo `.env` na pasta `backend/`:
+Create `.env` inside `backend/`:
 ```env
 PORT=8000
 ```
 
-API disponível em: `http://localhost:8000/docs`
+API available at: `http://localhost:8000/docs`
 
 ### Frontend
 ```powershell
@@ -120,45 +120,45 @@ npm install
 npm run dev
 ```
 
-Crie o arquivo `.env.local` na pasta `frontend/`:
+Create `.env.local` inside `frontend/`:
 ```env
 NEXT_PUBLIC_API_URL=http://localhost:8000
 ```
 
-App disponível em: `http://localhost:3000/translatia`
+App available at: `http://localhost:3000/translatia`
 
-> ⚠️ Rode os dois terminais ao mesmo tempo.
+> ⚠️ Run both terminals at the same time.
 
 ---
 
-## 📡 Endpoints da API
+## 📡 API Endpoints
 
-| Método | Rota | Descrição |
+| Method | Route | Description |
 |---|---|---|
-| GET | `/` | Status da API |
-| POST | `/translate` | Traduz texto com glossário preservado |
-| POST | `/upload-pdf` | Extrai texto de PDF |
+| GET | `/` | API status |
+| POST | `/translate` | Translate text with preserved glossary |
+| POST | `/upload-pdf` | Extract text from PDF |
 
 ---
 
-## 🔑 Variáveis de Ambiente
+## 🔑 Environment Variables
 
-| Variável | Onde | Descrição |
+| Variable | Where | Description |
 |---|---|---|
-| `NEXT_PUBLIC_API_URL` | frontend `.env.local` | URL do backend |
-| `PORT` | backend `.env` | Porta do uvicorn |
+| `NEXT_PUBLIC_API_URL` | frontend `.env.local` | Backend URL |
+| `PORT` | backend `.env` | uvicorn port |
 
 ---
 
-## 🤝 Contato
+## 🤝 Contact
 
-**Rs4Machine** — Corporação de Agentes Autônomos  
+**Rs4Machine** — Autonomous Agents Corporation  
 CEO: Raphael Mendes  
 📧 python.dev.raphael@gmail.com  
 🔗 [github.com/raphaelmendes-dev](https://github.com/raphaelmendes-dev)
 
 ---
 
-⭐ Dê uma estrela se o projeto te ajudou!
+⭐ Star this repo if it helped you!
 
-*Última atualização: Março 2026*
+*Last updated: September 2026*
