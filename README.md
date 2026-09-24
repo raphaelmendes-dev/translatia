@@ -18,7 +18,7 @@
     <a href="https://github.com/raphaelmendes-dev"><strong>GitHub</strong></a> •
     <a href="mailto:python.dev.raphael@gmail.com">Contact</a>
   </p>
-  <p><em>README em <a href="README.pt-br.md">Português</a></em></p>
+  <p><em>README em <a href="README.pt-BR.md">Português</a></em></p>
 </div>
 
 ---
